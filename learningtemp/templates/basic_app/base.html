@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  </head>
+  <body>
+    <nav class="nvabar navbar-default navbar-static-top">
+          <div class="container">
+              <ul class="nav navbar-nav">
+                <li><a class="navbar-link" style="color:white;background:black;margin:0" href="{% url 'index' %}">BRAND</a></li>
+                <li><a class="navbar-link" style="color:white;background:black;margin:0" href="{% url 'admin:index'%}">ADMIN</a></li>
+                <li><a class="navbar-link" style="color:white;background:black;margin:0" href="{% url 'basic_app:other' %}">OTHER</a></li>
+                <li><a class="navbar-link" style="color:white;background:black;margin:0" href="{% url 'basic_app:relative'%}">RELATIVE</a></li>
+              </ul>
+          </div>
+    </nav>
+    <div class="container">
+      {% block body_block %}
+
+      {% endblock %}
+    </div>
+  </body>
+</html>
